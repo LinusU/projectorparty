@@ -1,0 +1,12 @@
+{
+  "name": "projector-party",
+  "subdomain": "projector-party",
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "version": "0.3.0",
+  "domains": ["projectorparty.com"]
+}

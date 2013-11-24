@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+
+    p {
+      position: absolute;
+      bottom: 8px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      font-family: 'Arial';
+      font-weight: bold;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      margin-top: -64px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      font-family: 'Arial';
+      font-weight: bold;
+      font-size: 96pt;
+      text-shadow: 64px 0px 0px #bbb, 128px 0px 0px #999, 256px 0px 0px #666, 512px 0px 0px #333, 0px 0px 64px #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div>\\'</div>
+
+  <p>
+    You're welcome. /Linus, Lukas, Wilhelm, Carl
+  </p>
+
+  <script type="text/javascript">
+    // window.requestAnimationFrame = (function(){
+    //   return  window.requestAnimationFrame       || 
+    //           window.webkitRequestAnimationFrame || 
+    //           window.mozRequestAnimationFrame    || 
+    //           window.oRequestAnimationFrame      || 
+    //           window.msRequestAnimationFrame     || 
+    //           function( callback ){
+    //             window.setTimeout(callback, 1000 / 60);
+    //           };
+    // })();
+  </script>
+
+  <script type="text/javascript">
+    
+    var p = document.getElementsByTagName('p')[0];
+    var div = document.getElementsByTagName('div')[0];
+    var body = document.getElementsByTagName('body')[0];
+    var colors = ['white','black'];
+    // var colors = ['red','green','blue','yellow'];
+    var colorsI = ['black','white'];
+    var current = 0;
+
+    var colors = ['red','green','blue','yellow'];
+    var colorsI = ['blue','yellow','red','green'];
+
+    function nextColor() {
+      return 'rgb(' + (0|(Math.random() * 256)) + ',' + (0|(Math.random() * 256)) + ',' + (0|(Math.random() * 256)) + ')';
+      var rand = (0|(Math.random() * colors.length));
+      current = ( rand == current ? current + 1 : rand );
+      return colors[current];
+    }
+
+    function doIt() {
+      setTimeout(function() {
+        body.style.backgroundColor = nextColor();
+        p.style.color = 'rgb(' + (0|(Math.random() * 256)) + ',' + (0|(Math.random() * 256)) + ',' + (0|(Math.random() * 256)) + ')';
+        p.style.left = Math.random() * 20 + 'px';
+        p.style.right = Math.random() * 20 + 'px';
+        p.style.bottom = Math.random() * 20 + 'px';
+        div.style.left = Math.random() * 10 + 'px';
+        div.style.right = Math.random() * 10 + 'px';
+        div.style.top = (48 + Math.random() * 4) + '%';
+        div.style.webkitTransform = 'rotate(' + (-6 + Math.random() * 360) + 'deg)';
+        doIt();
+      }, 1000 / 40);
+    }
+
+    doIt();
+
+  </script>
+
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '50953bc5f5a1f5540a00004c');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+</body>
+</html>
